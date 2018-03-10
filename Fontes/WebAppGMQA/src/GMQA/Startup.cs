@@ -62,7 +62,7 @@ namespace GMQA
                 conexaoBD = Constantes.CONEXAO_BANCO;
 
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(conexaoBD));
+            options.UseMySql(conexaoBD));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                             .AddEntityFrameworkStores<ApplicationDbContext>()

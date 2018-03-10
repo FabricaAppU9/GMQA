@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>GMQA</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>GMQA</PackageId>
+    <UserSecretsId>aspnet-GMQA-26e0b2b1-2419-4e42-b334-76ffdc06dcfd</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Update="wwwroot\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="3.3.7" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="1.1.2" />
+    <PackageReference Include="microsoft.aspnetcore.diagnostics" Version="1.1.2" />
+    <PackageReference Include="microsoft.aspnetcore.diagnostics.entityframeworkcore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="microsoft.aspnetcore.mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="1.0.2" />
+    <PackageReference Include="microsoft.aspnetcore.server.kestrel" Version="1.1.2" />
+    <PackageReference Include="microsoft.aspnetcore.staticfiles" Version="1.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Owin.Security.Facebook" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="PDQ.Framework.Web.CssIcons" Version="4.0.5500.30939" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+    <Exec Command="bower install" />
+  </Target>
+
+</Project>
