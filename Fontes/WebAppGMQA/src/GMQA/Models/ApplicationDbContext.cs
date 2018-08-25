@@ -8,6 +8,7 @@ using WebAppCoreGMQA.ViewModels.Projeto;
 using WebAppCoreGMQA.ViewModels.Usuario;
 using WebAppCoreGMQA.ViewModels.Etapa;
 using WebAppCoreGMQA.ViewModels.Metrica;
+using WebAppCoreGMQA.ViewModels.Artefatos;
 
 namespace WebAppCoreGMQA.Models
 {
@@ -28,8 +29,8 @@ namespace WebAppCoreGMQA.Models
         public DbSet<ProjetoViewModel> ProjetoViewModel { get; set; }
         public DbSet<UsuarioViewModel> UsuarioViewModel { get; set; }
         public DbSet<EtapaViewModel> EtapaViewModel { get; set; }
-
         public DbSet<MetricaViewModel> MetricaViewModel { get; set; }
+        public DbSet<ArtefatosViewModel> ArtefatosViewModel { get; set; }
 
     }
 }
